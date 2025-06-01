@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:controller="Manager.UserManager" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a3c1ad;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="177.0" layoutY="69.0" prefHeight="282.0" prefWidth="249.0" style="-fx-background-color: #f5f5f5;" stylesheets="Style.css">
+         <children>
+            <AnchorPane prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: #8fbc8f;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="2.0" layoutX="61.0" layoutY="17.0" lineSpacing="1.5" prefHeight="28.0" prefWidth="127.0" text="Balance" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Franklin Gothic Heavy" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Button fx:id="AddBalance" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="91.0" mnemonicParsing="false" onAction="#handleAddBalance" prefHeight="35.0" prefWidth="214.0" style="-fx-background-color: #8fbc8f;" styleClass="button" text="Add Balance" textAlignment="CENTER" textFill="WHITESMOKE">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="BackToMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleViewDashboard" prefHeight="35.0" prefWidth="214.0" style="-fx-background-color: #8fbc8f;" styleClass="button" text="Back To Menu" textAlignment="CENTER" textFill="WHITESMOKE">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="Withdraw" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleWithdrawBalance" prefHeight="35.0" prefWidth="214.0" style="-fx-background-color: #8fbc8f;" styleClass="button" text="Withdraw" textAlignment="CENTER" textFill="WHITESMOKE">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

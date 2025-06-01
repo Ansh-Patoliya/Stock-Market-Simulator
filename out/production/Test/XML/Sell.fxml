@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="600.0" style="-fx-background-color: #a3c1ad;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Manager.SellStockManager">
+   <children>
+      <AnchorPane layoutX="116.0" layoutY="83.0" prefHeight="377.0" prefWidth="367.0" style="-fx-background-color: #f5f5f5;">
+         <children>
+            <AnchorPane layoutX="-1.0" prefHeight="78.0" prefWidth="368.0" style="-fx-background-color: #8fbc8f;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="2.0" layoutX="90.0" layoutY="18.0" lineSpacing="1.5" prefHeight="42.0" prefWidth="188.0" text=" 🛒 Sell Stocks" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Franklin Gothic Heavy" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="2.0" layoutX="14.0" layoutY="92.0" lineSpacing="1.5" prefHeight="30.0" prefWidth="134.0" text="Select Stock :" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="stockComboBox" layoutX="155.0" layoutY="93.0" prefWidth="150.0" />
+            <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="2.0" layoutX="10.0" layoutY="135.0" lineSpacing="1.5" prefHeight="30.0" prefWidth="142.0" text="Current Price :" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="2.0" layoutX="14.0" layoutY="176.0" lineSpacing="1.5" prefHeight="30.0" prefWidth="142.0" text="Quantity :" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="2.0" layoutX="14.0" layoutY="216.0" lineSpacing="1.5" prefHeight="30.0" prefWidth="142.0" text="Total Amount:" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="2.0" layoutX="14.0" layoutY="256.0" lineSpacing="1.5" prefHeight="30.0" prefWidth="142.0" text="Wallet :" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="SellButton" alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="302.0" mnemonicParsing="false" onAction="#handleSell" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #8fbc8f;" styleClass="button" text="Sell Now" textAlignment="CENTER" textFill="WHITESMOKE">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" alignment="CENTER" contentDisplay="CENTER" layoutX="194.0" layoutY="302.0" mnemonicParsing="false" onAction="#handleBackToDashBoard" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #8fbc8f;" styleClass="button" text="Cancel" textAlignment="CENTER" textFill="WHITESMOKE">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="19.0" />
+               </font>
+            </Button>
+            <Label fx:id="priceLabel" contentDisplay="TOP" graphicTextGap="2.0" layoutX="159.0" layoutY="135.0" lineSpacing="1.5" prefHeight="30.0" prefWidth="142.0" text="₹0.00" textAlignment="CENTER" textFill="#269e52" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="quantityField" layoutX="142.0" layoutY="178.0" promptText="Enter Quantity" />
+            <Label fx:id="totalLabel" contentDisplay="TOP" graphicTextGap="2.0" layoutX="159.0" layoutY="216.0" lineSpacing="1.5" prefHeight="30.0" prefWidth="142.0" text="₹0.00" textAlignment="CENTER" textFill="#bf4c3d" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="walletBalanceLabel" contentDisplay="TOP" graphicTextGap="2.0" layoutX="150.0" layoutY="256.0" lineSpacing="1.5" prefHeight="30.0" prefWidth="142.0" text="₹0.00" textAlignment="CENTER" textFill="#47469c" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

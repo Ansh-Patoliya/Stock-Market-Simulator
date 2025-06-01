@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="516.0" prefWidth="694.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Manager.DashboardManager">
+   <children>
+      <AnchorPane layoutX="119.0" layoutY="89.0" prefHeight="338.0" prefWidth="464.0" style="-fx-background-color: #a3c1ad;">
+         <children>
+            <Button fx:id="ViewStocks" alignment="CENTER" contentDisplay="CENTER" layoutX="129.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleViewStocks" prefHeight="35.0" prefWidth="214.0" style="-fx-background-color: #d7e4d7;" styleClass="button" text="📈 View Stocks" textAlignment="CENTER" textFill="#617b61">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="MyPortfolio" alignment="CENTER" contentDisplay="CENTER" layoutX="129.0" layoutY="99.0" mnemonicParsing="false" onAction="#handlePortfolio" prefHeight="35.0" prefWidth="214.0" style="-fx-background-color: #d7e4d7;" styleClass="button" text="💼 My Portfolio" textAlignment="CENTER" textFill="#617b61">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="Logout" alignment="CENTER" contentDisplay="CENTER" layoutX="129.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="35.0" prefWidth="214.0" style="-fx-background-color: #d7e4d7;" text="🚪  Logout" textAlignment="CENTER" textFill="#617b61">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="19.0" />
+               </font>
+            </Button>
+
+
+            <Button fx:id="Transaction" alignment="CENTER" contentDisplay="CENTER" layoutX="129.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="35.0" prefWidth="214.0" style="-fx-background-color: #d7e4d7;" styleClass="button" text="📃 Transactions" textAlignment="CENTER" textFill="#617b61">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="Balance" alignment="CENTER" contentDisplay="CENTER" layoutX="129.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleBalance" prefHeight="35.0" prefWidth="214.0" style="-fx-background-color: #d7e4d7;" styleClass="button" text="💸 Balance" textAlignment="CENTER" textFill="#617b61" >
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

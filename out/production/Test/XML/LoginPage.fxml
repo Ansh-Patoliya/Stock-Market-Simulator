@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a3c1ad;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Manager.UserManager" >
+   <children>
+      <AnchorPane stylesheets="Style.css" layoutX="167.0" layoutY="59.0" prefHeight="282.0" prefWidth="249.0" style="-fx-background-color: #f5f5f5;">
+         <children>
+            <AnchorPane prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: #8fbc8f;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="2.0" layoutX="61.0" layoutY="17.0" lineSpacing="1.5" prefHeight="28.0" prefWidth="127.0" text="Login Form" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Franklin Gothic Heavy" size="24.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <TextField fx:id="emailField" layoutX="62.0" layoutY="92.0" prefHeight="27.0" prefWidth="170.0" promptText="Email" />
+            <PasswordField fx:id="passwordField" layoutX="62.0" layoutY="141.0" prefHeight="27.0" prefWidth="169.0" promptText="Password" />
+            <Button fx:id="login" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="209.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="214.0" style="-fx-background-color: #8fbc8f;" text="Login" textAlignment="CENTER" textFill="WHITESMOKE" styleClass="button">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="19.0" />
+               </font></Button>
+            <ImageView fitHeight="41.0" fitWidth="50.0" layoutX="14.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Desktop/project/user.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="49.0" layoutX="10.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Desktop/project/10275052.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="47.0" layoutY="248.0" text="Not a member?" textFill="#050404" />
+            <Hyperlink fx:id="signup" layoutX="136.0" layoutY="245.0" text="Signup now" onAction="#handleRegister" />
+            <Hyperlink fx:id="forgotPassword" layoutX="18.0" layoutY="179.0" text="Forgot password?" onAction="#handleForgotPassword"/>
+         </children>
+      </AnchorPane>
+   </children>
+   <effect>
+      <Blend />
+   </effect>
+</AnchorPane>
