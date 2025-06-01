@@ -78,9 +78,14 @@ Start the app via Main.java
 - Bull and Bear market trends influence global price directions.
 
 ---
+
 -👨‍💻 Developer Info
+
 -Patoliya Ansh Amitbhai
+
 -LJIET – B.E. Computer Engineering
+
 -Batch: 2024 – 2028
+
 ---
 
