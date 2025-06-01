@@ -33,12 +33,17 @@ A real-time stock trading simulator built with Java and JavaFX. It allows users 
 
 src/
 │
-├── dao/ # Data access layer (UserDAO, StockDAO, etc.)
-├── model/ # Java models (User, Stock, PortfolioItem)
-├── Manager/ # JavaFX controllers (LoginManager, DashboardManager, etc.)
-├── ui/ # Scene navigation helper (Connection.java)
-├── util/ # Utilities like DB connection and session
-└── XML/ # FXML files for UI layouts
+├── dao/           # Data Access Objects (UserDAO, StockDAO, TransactionDAO, etc.)
+│
+├── model/         # Java model classes (User, Stock, PortfolioItem, etc.)
+│
+├── Manager/       # JavaFX Controllers (LoginManager, DashboardManager, PortfolioManager, etc.)
+│
+├── ui/            # Scene Navigation Helper (e.g., Connection.java)
+│
+├── util/          # Utility classes (e.g., DBConnection, SessionManager)
+│
+└── XML/           # FXML layout files for all JavaFX screens
 
 
 ---
