@@ -35,4 +35,8 @@ public class DashboardManager {
     public void handlePortfolio(ActionEvent event) throws IOException {
         Connection.showPortfolio(event);
     }
+
+    public void handleTransactions(ActionEvent event) throws IOException {
+        Connection.showTransactionHistory(event);
+    }
 }

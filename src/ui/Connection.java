@@ -130,6 +130,13 @@ public class Connection {
         stage.setScene(new Scene(root));
         stage.setTitle("Portfolio");
         stage.show();
-
+    }
+    @FXML
+    public static void showTransactionHistory(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Connection.class.getResource("/XML/Transaction.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Transaction History");
+        stage.show();
     }
 }

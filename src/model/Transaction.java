@@ -1,5 +1,6 @@
 package model;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 public class Transaction {
@@ -9,55 +10,85 @@ public class Transaction {
     private String stockName;
     private int quantity;
     private double pricePerShare;
-    private boolean isBuy;
-    private LocalDateTime timestamp;
+    private String transactionType; // "BUY" or "SELL"
+    private Timestamp timestamp;
+    private double totalValue; // Total value of the portfolio item
 
-    public Transaction(String userEmail, String stockSymbol, String stockName, int quantity, double pricePerShare, boolean isBuy) {
-        this.userEmail = userEmail;
+    public Transaction( String stockSymbol, int quantity, double pricePerShare, String transactionType,Timestamp timestamp) {
         this.stockSymbol = stockSymbol;
-        this.stockName = stockName;
         this.quantity = quantity;
         this.pricePerShare = pricePerShare;
-        this.isBuy = isBuy;
-        this.timestamp = LocalDateTime.now();
+        this.transactionType = transactionType;
+        this.timestamp = timestamp;
+        totalValue=this.getTotalAmount();
+    }
+
+    public double getTotalValue() {
+        return totalValue;
+    }
+
+    public void setTotalValue(double totalValue) {
+        this.totalValue = totalValue;
     }
 
     public String getUserEmail() {
         return userEmail;
     }
 
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
     public String getStockSymbol() {
         return stockSymbol;
+    }
+
+    public void setStockSymbol(String stockSymbol) {
+        this.stockSymbol = stockSymbol;
     }
 
     public String getStockName() {
         return stockName;
     }
 
+    public void setStockName(String stockName) {
+        this.stockName = stockName;
+    }
+
     public int getQuantity() {
         return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public double getPricePerShare() {
         return pricePerShare;
     }
 
-    public boolean isBuy() {
-        return isBuy;
+    public void setPricePerShare(double pricePerShare) {
+        this.pricePerShare = pricePerShare;
     }
 
-    public LocalDateTime getTimestamp() {
+    public String getTransactionType() {
+        return transactionType;
+    }
+
+    public void setTransactionType(String transactionType) {
+        this.transactionType = transactionType;
+    }
+
+    public Timestamp getTimestamp() {
         return timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
     }
 
     public double getTotalAmount() {
         return pricePerShare * quantity;
     }
 
-    @Override
-    public String toString() {
-        return (isBuy ? "BUY" : "SELL") + " | " + quantity + " shares of " + stockSymbol +
-                " at $" + pricePerShare + " | Total: $" + getTotalAmount() +
-                " | User: " + userEmail + " | Time: " + timestamp;
-    }
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a3c1ad;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Manager.UserManager">
+   <children>
+      <AnchorPane layoutX="177.0" layoutY="69.0" prefHeight="282.0" prefWidth="249.0" style="-fx-background-color: #f5f5f5;" stylesheets="Style.css">
+         <children>
+            <AnchorPane prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: #8fbc8f;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="2.0" layoutX="6.0" layoutY="17.0" lineSpacing="1.5" prefHeight="28.0" prefWidth="238.0" text="Withdraw Balance" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Franklin Gothic Heavy" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="amountField" layoutX="61.0" layoutY="92.0" prefHeight="27.0" prefWidth="170.0" promptText="Amount" />
+            <Button fx:id="Back" onAction="#handleViewDashboard" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="211.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="214.0" style="-fx-background-color: #8fbc8f;" styleClass="button" text="Back" textAlignment="CENTER" textFill="WHITESMOKE">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="19.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="41.0" fitWidth="50.0" layoutX="9.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Desktop/project/money.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="WithdrawBalance" onAction="#withdrawWalletBalance" alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="141.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="188.0" style="-fx-background-color: #8fbc8f;" styleClass="button" text="Withdraw Balance" textAlignment="CENTER" textFill="WHITESMOKE">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

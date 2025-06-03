@@ -44,8 +44,6 @@ public class PortfolioManager {
     @FXML
     private Label walletLabel;
 
-    TransactionDAO transactionDAO = new TransactionDAO();
-
     private User currentUser;
     private ObservableList<PortfolioItem> portfolioItems;
     private StockDAO stockDAO= new StockDAO();

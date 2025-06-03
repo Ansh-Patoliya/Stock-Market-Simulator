@@ -2,13 +2,13 @@ package dao;
 
 import dbUtil.DBUtil;
 import model.PortfolioItem;
+import model.Transaction;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class TransactionDAO {
 
@@ -33,29 +33,30 @@ public class TransactionDAO {
         }
     }
 
-    public List<PortfolioItem> getTransactionHistory(int userId) {
+    public List<Transaction> getTransactionHistory(int userId) {
         Connection conn = null;
-        List<PortfolioItem> portfolioItems = new ArrayList<>();
+        List<Transaction> transactionList = new ArrayList<>();
         try {
             conn = DBUtil.getConnection();
             if (conn == null) {
                 throw new SQLException("Failed to connect to the database.");
             }
-            String sql = "SELECT stock_symbol, company_name, quantity, average_price FROM transactions WHERE user_id = ?";
+            String sql = "SELECT stock_symbol, quantity, average_price,transaction_type,transaction_time FROM transactions WHERE user_id = ?";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setInt(1, userId);
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
                 String symbol = rs.getString("stock_symbol");
-                String name = rs.getString("company_name");
                 int quantity = rs.getInt("quantity");
                 double avgPrice = rs.getDouble("average_price");
-                portfolioItems.add(new PortfolioItem(symbol, name, quantity, avgPrice));
+                String transactionType = rs.getString("transaction_type");
+                Timestamp dateTime =rs.getTimestamp("transaction_time");
+                transactionList.add(new Transaction(symbol, quantity, avgPrice, transactionType, dateTime));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return portfolioItems;
+        return transactionList;
     }
 }
