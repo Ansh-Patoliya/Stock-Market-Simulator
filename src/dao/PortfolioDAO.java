@@ -165,4 +165,34 @@ public class PortfolioDAO {
         return stockSymbols;
     }
 
+    public List<PortfolioItem> getPortfolioItems(int userId) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        List<PortfolioItem> portfolioItems = new ArrayList<>();
+
+        try {
+            conn = DBUtil.getConnection();
+            ps = conn.prepareStatement("SELECT p.stock_symbol, s.name AS stock_name, p.quantity, p.average_price " +
+                    "FROM portfolio p JOIN stocks s ON p.stock_symbol = s.symbol WHERE p.user_id = ?");
+            ps.setInt(1, userId);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                String stockSymbol = rs.getString("stock_symbol");
+                String stockName = rs.getString("stock_name");
+                int quantity = rs.getInt("quantity");
+                double averageBuyPrice = rs.getDouble("average_price");
+
+                PortfolioItem item = new PortfolioItem(stockSymbol, stockName, quantity, averageBuyPrice);
+                portfolioItems.add(item);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(rs, ps, conn);
+        }
+
+        return portfolioItems;
+    }
 }

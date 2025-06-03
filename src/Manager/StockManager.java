@@ -120,6 +120,4 @@ public class StockManager {
     private void goToSellStock(ActionEvent event) throws IOException {
         Connection.showSellStock(event);
     }
-
-
 }

@@ -5,24 +5,20 @@ public class PortfolioItem {
     private String stockName;
     private int quantity;
     private double averageBuyPrice;
-    private double totalValue;
-
+    private double currentPrice; // Current price of the stock, can be updated dynamically
+    private double totalValue; // Total value of the portfolio item
+    private double profitLoss;
 
     public PortfolioItem(String stockSymbol, String stockName, int quantity, double averageBuyPrice) {
         this.stockSymbol = stockSymbol;
         this.stockName = stockName;
         this.quantity = quantity;
         this.averageBuyPrice = averageBuyPrice;
-        this.totalValue = Math.round((quantity * averageBuyPrice)*100.0)/100.0; // Calculate total value based on quantity and average buy price
     }
 
     // Getters and Setters
     public String getStockSymbol() {
         return stockSymbol;
-    }
-
-    public double getTotalValue() {
-        return totalValue;
     }
 
     public void setStockSymbol(String stockSymbol) {
@@ -53,8 +49,27 @@ public class PortfolioItem {
         this.averageBuyPrice = averageBuyPrice;
     }
 
-    // Helper method to calculate profit/loss
-    public double getProfitLoss(double currentPrice) {
-        return (currentPrice - averageBuyPrice) * quantity;
+    public double getCurrentPrice() {
+        return currentPrice;
+    }
+
+    public double getTotalValue() {
+        return totalValue;
+    }
+
+    public void setCurrentPrice(double currentPrice) {
+        this.currentPrice = currentPrice;
+    }
+
+    public void setTotalValue(double totalValue) {
+        this.totalValue = totalValue;
+    }
+
+    public void setProfitLoss(double profitLoss) {
+        this.profitLoss = profitLoss;
+    }
+
+    public double getProfitLoss() {
+        return profitLoss;
     }
 }

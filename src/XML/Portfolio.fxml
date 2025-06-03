@@ -7,22 +7,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" fx:controller="Manager.PortfolioManager" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="805.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="851.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Manager.PortfolioManager">
    <children>
       <AnchorPane prefHeight="544.0" prefWidth="206.0" style="-fx-background-color: #a3c1ad;">
          <children>
-            <Button fx:id="Dashboard" onAction="#handleBackToDashBoard" layoutX="24.0" layoutY="141.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #f5f5f5;" text="Dashboard" textFill="#256632">
+            <Button fx:id="Dashboard" layoutX="24.0" layoutY="141.0" mnemonicParsing="false" onAction="#handleBackToDashBoard" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #f5f5f5;" text="Dashboard" textFill="#256632">
                <font>
                   <Font name="Franklin Gothic Heavy" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="BuyStocks" onAction="#handleBuyStocks" layoutX="24.0" layoutY="197.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #f5f5f5;" text="Buy Stocks" textFill="#246624">
+            <Button fx:id="BuyStocks" layoutX="24.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleBuyStocks" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #f5f5f5;" text="Buy Stocks" textFill="#246624">
                <font>
                   <Font name="Franklin Gothic Heavy" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="SellStocks" onAction="#handleSellStocks" layoutX="24.0" layoutY="254.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #f5f5f5;" text="Sell Stocks" textFill="#246624">
+            <Button fx:id="SellStocks" layoutX="24.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleSellStocks" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #f5f5f5;" text="Sell Stocks" textFill="#246624">
                <font>
                   <Font name="Franklin Gothic Heavy" size="20.0" />
                </font>
@@ -34,14 +33,16 @@
             <Font name="Calibri" size="26.0" />
          </font>
       </Label>
-      <TableView layoutX="231.0" layoutY="105.0" prefHeight="226.0" prefWidth="554.0" fx:id="portfolioTable" style="-fx-background-color: #f5f5f5;">
-        <columns>
-          <TableColumn fx:id="stockSymbolColumn" prefWidth="115.199951171875" text="Stock Symbol" />
-          <TableColumn fx:id="companyNameColumn" prefWidth="134.40008544921875" text="Company Name" />
-            <TableColumn fx:id="quantityColumn" prefWidth="92.00009155273438" text="Quantity" />
-            <TableColumn fx:id="currentPriceColumn" prefWidth="108.0" text="Current Price" />
-            <TableColumn fx:id="totalValueColumn" prefWidth="106.40008544921875" text="Total Value" />
-        </columns>
+      <TableView fx:id="portfolioTable" layoutX="213.0" layoutY="105.0" prefHeight="226.0" prefWidth="638.0" style="-fx-background-color: #f5f5f5;">
+         <columns>
+            <TableColumn fx:id="stockSymbolColumn" prefWidth="92.0" text="Stock Symbol" />
+            <TableColumn fx:id="companyNameColumn" prefWidth="108.79998779296875" text="Company Name" />
+            <TableColumn fx:id="quantityColumn" prefWidth="64.79998779296875" text="Quantity" />
+            <TableColumn fx:id="currentPriceColumn" prefWidth="97.60000610351562" text="Current Price" />
+            <TableColumn fx:id="averageBuyPriceColumn" prefWidth="88.0" text="Avg. Price" />
+            <TableColumn fx:id="totalValueColumn" prefWidth="96.79998779296875" text="Total Value" />
+            <TableColumn fx:id="profitLossColumn" prefWidth="92.0" text="Profit/Loss" />
+         </columns>
       </TableView>
       <Label fx:id="walletLabel" contentDisplay="TOP" graphicTextGap="2.0" layoutX="656.0" layoutY="28.0" lineSpacing="1.5" prefHeight="30.0" prefWidth="142.0" text="₹0.00" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
          <font>
